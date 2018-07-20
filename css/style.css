@@ -1,0 +1,361 @@
+ @font-face {
+   font-family: beyno;
+   src: url(BEYNO.ttf);
+}
+
+ @font-face {
+   font-family: Potra;
+   src: url(potra-webfont.woff2);
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+  left:100px;
+}
+
+h1{
+	  font-family: 'Beyno',Georgia;
+	  text-align: center;
+	  margin-top: 10px;
+	  font-size: 5rem;
+	  color:rgba(202, 202, 202,0.7);
+}
+
+.sunrise, .sunset{
+   top:372px;
+  font-size: 3rem;
+  position:absolute;
+  margin-left: 240px;
+}
+.sunset{
+  top:422px;
+  margin-left: 253px;
+}
+.today,.tomorrow,.dayAfterTomorrow{
+  /*line-height: 2px;*/
+  position:absolute;
+  width:255px;
+ margin-left:12px;
+  top:102px;
+  color:rgba(202, 202, 202);
+  text-align: center;
+}
+
+h2{
+font-family: Georgia;
+}
+.tomorrow{
+  position: absolute;
+  top:102px;
+  /*width:295px;*/
+   margin-left:322px;
+   text-align: center;
+}
+.tomorrow h1{
+  margin-left:-8px;
+}
+.dayAfterTomorrow{
+  position: absolute;
+  top:102px;
+  /*width:375px;*/
+   margin-left:692px;
+   text-align: center;
+}
+
+.dayAfterTomorrow h1{
+  margin-left:-18px;
+}
+
+.today h1, .tomorrow h1,.dayAfterTomorrow h1{
+  font-size: 3rem;
+  font-family: 'Potra',Georgia;
+}
+.today h3, .tomorrow h3,.dayAfterTomorrow h3{
+  font-size: 5rem;
+  /*font-family: 'Potra',Georgia;*/
+}
+
+.skew-title {
+  position:relative;
+    margin-top: 100px;
+    margin-left: 130px;
+    margin-right: 10px;
+    position: fixed;
+    top: 30px;
+    font-size: 25px;
+    width: 50px;
+}
+.skew-title span {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 50px;
+  margin: auto;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  font-family: 'roboto condensed';
+  font-weight: 700;
+  font-size: 35.714285714285715px;
+  line-height: 50px;
+  -webkit-transform: skewY(-15deg);
+          transform: skewY(-15deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  transition: all 0.2s;
+  cursor: default;
+}
+.skew-title span:after,
+.skew-title span:before {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  background: #185a81;
+  content: ' ';
+  z-index: -1;
+  transition: all 0.2s;
+}
+.skew-title span:before {
+  background: rgba(0,0,0,0.1);
+  
+          transform: skewY(15deg);
+  
+          transform-origin: 0 0;
+}
+.skew-title span:nth-child(even) {
+  background-color: #144c6e;
+ 
+          transform: skewY(15deg);
+  
+          transform-origin: 100% 100%;
+  color: #d9d9d9;
+}
+.skew-title span:nth-child(even):after {
+  background-color: #144c6e;
+}
+.skew-title span:nth-child(even):before {
+ 
+          transform-origin: 100% 0;
+
+          transform: skewY(-15deg);
+}
+.skew-title span.flat {
+  
+          transform: skewY(0);
+  color: #fff;
+}
+.skew-title span.flat:before {
+ 
+          transform: skewY(0);
+}
+.skew-title span.flat:nth-child(even):after {
+  background-color: #185a81;
+}
+.skew-title span.alt:after {
+  background-color: #b94a2c;
+}
+.skew-title span.alt:nth-child(even):after {
+  background-color: #9d3f25;
+}
+.skew-title span.alt.flat:nth-child(even):after {
+  background-color: #b94a2c;
+}
+
+
+.gitlogo {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    transform: rotate(40deg);
+    z-index: 1;
+}
+
+.github-ribbon {
+  position: absolute;
+  top: -35px;
+  right: -114px;
+  padding: 1px 0;
+  transform-origin: top left;
+  transform: rotate(45deg);
+  background-color: #ea7600;
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.25), transparent);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
+  z-index:1;
+}
+
+.github-ribbon__link {
+  display: inline-block;
+  width: 250px;
+  color: #fff;
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+  text-shadow: 0 -1px #777;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+  border-top: 1px dotted #ffc284;
+  border-bottom: 1px dotted #ffa951;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Helvetica Neue';
+  background-color: #333;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* CSS Document */
+
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+html, body
+{
+	background: #000;
+	width: 100%;
+	height: 100%;
+}
+
+#wrap
+{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0 auto 0 auto;
+	overflow: hidden;
+}
+
+#lightings
+{
+	bottom: -60px;
+	position: absolute;
+	width: 100%;
+}
+
+section
+{
+	/*border-radius*/
+
+	border-radius: 50%;
+	height: 20px;
+	width: 100%;
+	position: relative;
+	margin: auto;
+
+}
+
+#one
+{
+	/*animation*/
+	animation: one 5s ease-in-out infinite alternate;
+}
+
+@keyframes 
+one { from {
+box-shadow: 0 0 250px 20px #473C78;
+}
+
+to {box-shadow: 0 0 100px 15px #5087CE; }
+}
+
+#two
+{
+	width: 90%;
+
+	animation: two 4s ease-in-out infinite alternate;
+}
+
+@keyframes 
+two { from {
+box-shadow: 0 0 250px 20px #18C499;
+}
+
+to { box-shadow: 0 0 100px 15px #002452; }
+}
+
+#three
+{
+	width: 80%;
+	/*animation*/
+	
+	animation: three 3s ease-in-out infinite alternate;
+}
+
+@keyframes 
+three { from {
+box-shadow: 0 0 250px 20px #251861;
+}
+
+to { box-shadow: 0 0 100px 15px #00D8AE }
+}
+
+#four
+{
+	width: 70%;
+	/*animation*/
+	animation: four 2s ease-in-out infinite alternate;
+}
+
+@keyframes 
+four { from {
+shadow: 0 0 250px 20px #06A3D7;
+}
+
+to { shadow: 0 0 100px 15px #015662; }
+}
+
+#five
+{
+	width: 60%;
+	/*animation*/
+
+	animation: five 1s ease-in-out infinite alternate;
+}
+
+@keyframes 
+five { from {
+box-shadow: 0 0 250px 20px #42F2A1;
+}
+
+to { box-shadow: 0 0 100px 15px #F4F6AD; }
+}
+
+/*#dc2430*/
+body { 
+	    background: black;
+
+}
+
+.container{
+
+	width:100px;
+	background: url(bg-pattern.png),linear-gradient(to left,rgba(3,52,107,0.5),rgba(10,70,136,0.5));
+	width: 1000px;
+	height:500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 5px 1px rgb(7, 81, 177);
+    overflow: hidden;
+    border-radius: 8px;
+    z-index:1;
+}
+
+.copyright {
+    position:absolute;
+    bottom: 8px;
+    right: 3px;
+    color: white;
+    font-size: 1rem;
+line-height:1;
+font-family: 'Amatic SC', cursive;
+}
