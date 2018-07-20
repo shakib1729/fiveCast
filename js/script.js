@@ -57,7 +57,7 @@ dayAfterTomorrow();
 
 async function getWoeid(latitude,longitude) {  // to get 'woeid' from 'latitude' and 'longitude'
             try {
-                const result = await fetch(`http://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong=${latitude},${longitude}`);
+                const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong=${latitude},${longitude}`);
                 const data = await result.json();
                 return data;
             } catch(error) {
@@ -68,7 +68,7 @@ async function getWoeid(latitude,longitude) {  // to get 'woeid' from 'latitude'
 
  async function getWeatherAW(woeid) {    // to get weather data from 'woeid'
             try {
-                const result = await fetch(`http://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`);
+                const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`);
                 const data = await result.json();
                 return data;
             } catch(error) {
